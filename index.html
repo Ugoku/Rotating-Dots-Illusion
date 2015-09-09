@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Optical circle illusion</title>
+	<style>
+		.circle {
+			border-radius: 50%;
+		}
+		#mainCircle {
+			background: #2BAFF7;
+			height: 400px;
+			margin: 200px auto 0;
+			position: relative;
+			width: 400px;
+		}
+		.smallCircle {
+			background: #000080;
+			height: 20px;
+			left: 190px;
+			position: absolute;
+			top: 190px;
+			width: 20px;
+		}
+
+
+		.smallCircle:nth-of-type(1) {
+			transform: translate(0, -180px);
+			animation: move1 4s ease-in-out -3s infinite; /* SECOND */
+		}
+		.smallCircle:nth-of-type(2) {
+			transform: rotate(22.5deg) translate(0, -180px);
+			animation: move2 4s ease-in-out -3.25s infinite; /* SIXTH */
+		}
+		.smallCircle:nth-of-type(3) {
+			transform: rotate(45deg) translate(0, -180px);
+			animation: move3 4s ease-in-out -3.5s infinite; /* FOURTH */
+		}
+		.smallCircle:nth-of-type(4) {
+			transform: rotate(67.5deg) translate(0, -180px);
+			animation: move4 4s ease-in-out -3.75s infinite; /* SEVENTH */
+		}
+		.smallCircle:nth-of-type(5) {
+			transform: rotate(90deg) translate(0, -180px);
+			animation: move5 4s ease-in-out 0s infinite; /* FIRST */
+		}
+		.smallCircle:nth-of-type(6) {
+			transform: rotate(112.5deg) translate(0, -180px);
+			animation: move6 4s ease-in-out -0.25s infinite; /* FIFTH*/
+		}
+		.smallCircle:nth-of-type(7) {
+			transform: rotate(135deg) translate(0, -180px);
+			animation: move7 4s ease-in-out -0.5s infinite; /* THIRD */
+		}
+		.smallCircle:nth-of-type(8) {
+			transform: rotate(157.5deg) translate(0, -180px);
+			animation: move8 4s ease-in-out -0.75s infinite; /* EIGHTH */
+		}
+
+		@keyframes move1 {
+			50% {
+				transform: translate(0, 180px);
+			}
+		}
+		@keyframes move2 {
+			50% {
+				transform: rotate(22.5deg) translate(0, 180px);
+			}
+		}
+		@keyframes move3 {
+			50% {
+				transform: rotate(45deg) translate(0, 180px);
+			}
+		}
+		@keyframes move4 {
+			50% {
+				transform: rotate(67.5deg) translate(0, 180px);
+			}
+		}
+		@keyframes move5 {
+			50% {
+				transform: rotate(90deg) translate(0, 180px);
+			}
+		}
+		@keyframes move6 {
+			50% {
+				transform: rotate(112.5deg) translate(0, 180px);
+			}
+		}
+		@keyframes move7 {
+			50% {
+				transform: rotate(135deg) translate(0, 180px);
+			}
+		}
+		@keyframes move8 {
+			50% {
+				transform: rotate(157.5deg) translate(0, 180px);
+			}
+		}
+	</style>
+</head>
+<body>
+<div id="mainCircle" class="circle">
+	<div class="circle smallCircle"></div>
+	<div class="circle smallCircle"></div>
+	<div class="circle smallCircle"></div>
+	<div class="circle smallCircle"></div>
+	<div class="circle smallCircle"></div>
+	<div class="circle smallCircle"></div>
+	<div class="circle smallCircle"></div>
+	<div class="circle smallCircle"></div>
+</div>
+</body>
+</html>
